@@ -20,37 +20,46 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome App"),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          alignment: Alignment.center,
-          
-          height: 100,
-          width: 100,
-          decoration: BoxDecoration(
-            color: Colors.teal,
-            boxShadow: [BoxShadow(
-              color: Colors.grey,
-              blurRadius: 5,
-              spreadRadius: 3,
-              offset: Offset(2.0,5.0)
-              )],
-            gradient: LinearGradient(colors: [Colors.yellow,Colors.pink]),
-            //shape: BoxShape.circle
-            borderRadius: BorderRadius.circular(10),
-            
-          ),
-          child: Text(
-            "I am Box",
-            style: TextStyle(
-             fontWeight: FontWeight.bold,
-             color: Colors.white,
-             fontSize: 20
-            ),
-            ),
+      body: Padding(
+        padding: const EdgeInsets.all(8),
+
+         child: Align(
+           alignment: Alignment.center,
+           child:  Container(
+        width: 200,
+        height: 400,
+        color: Colors.black,
+       child:Padding(
+        padding: const EdgeInsets.all(8),
+         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              height: 100,
+              width: 100,
+              color: Colors.red,
+           ),
+           Container(
+              padding: const EdgeInsets.all(8),
+              height: 100,
+              width: 100,
+              color: Colors.green,
+           ),
+           Container(
+              padding: const EdgeInsets.all(8),
+              height: 100,
+              width: 100,
+              color: Colors.yellow
+           )
+          ],
+        )
         )
       )
+      )
       
+    )
     );
   }
 }
