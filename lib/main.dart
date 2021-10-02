@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -19,20 +21,36 @@ class HomePage extends StatelessWidget {
         title: Text("Awesome App"),
       ),
       body: Center(
-        child:Container(
-          padding:const EdgeInsets.all(8),
+        child: Container(
+          padding: const EdgeInsets.all(8),
           alignment: Alignment.center,
           
+          height: 100,
+          width: 100,
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
             color: Colors.teal,
-            gradient: LinearGradient(colors: [Colors.yellow,Colors.amberAccent],)
+            boxShadow: [BoxShadow(
+              color: Colors.grey,
+              blurRadius: 5,
+              spreadRadius: 3,
+              offset: Offset(2.0,5.0)
+              )],
+            gradient: LinearGradient(colors: [Colors.yellow,Colors.pink]),
+            //shape: BoxShape.circle
+            borderRadius: BorderRadius.circular(10),
+            
           ),
-          width: 150,
-          height: 150,
-          child: Text("East 2 West Sundu is the best"),
-        ),
-      ),
+          child: Text(
+            "I am Box",
+            style: TextStyle(
+             fontWeight: FontWeight.bold,
+             color: Colors.white,
+             fontSize: 20
+            ),
+            ),
+        )
+      )
+      
     );
   }
 }
