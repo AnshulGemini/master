@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
           ),
           width: 150,
           height: 150,
-          child: Text("My Sundu is the best"),
+          child: Text("East to West Sundu is the best"),
         ),
       ),
     );
